@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -rdynamic CMakeFiles/ls.dir/file_status.cpp.o CMakeFiles/ls.dir/main.cpp.o -o ls 
