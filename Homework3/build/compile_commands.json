@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/root/LinuxHomework/Homework3/build",
+  "command": "/usr/bin/clang++-14  -I/root/LinuxHomework/Homework3/src/include -g -std=gnu++17 -o CMakeFiles/test.dir/test.cpp.o -c /root/LinuxHomework/Homework3/test.cpp",
+  "file": "/root/LinuxHomework/Homework3/test.cpp"
+}
+]
