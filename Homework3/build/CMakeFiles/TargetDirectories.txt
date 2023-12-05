@@ -1,3 +1,0 @@
-/root/LinuxHomework/Homework3/build/CMakeFiles/test.dir
-/root/LinuxHomework/Homework3/build/CMakeFiles/edit_cache.dir
-/root/LinuxHomework/Homework3/build/CMakeFiles/rebuild_cache.dir

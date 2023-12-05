@@ -7,4 +7,4 @@ project(FileSort)
 
 include_directories("${PROJECT_SOURCE_DIR}/src/include")
 
-add_executable(test test.cpp)
+add_subdirectory("${PROJECT_SOURCE_DIR}/src")

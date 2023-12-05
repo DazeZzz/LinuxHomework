@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/root/Homework1/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++17 -o CMakeFiles/new_file.dir/new_file.cpp.o -c /root/Homework1/new_file.cpp",
-  "file": "/root/Homework1/new_file.cpp"
-}
-]

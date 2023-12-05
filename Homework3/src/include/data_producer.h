@@ -9,28 +9,24 @@ struct ProduceInfo {
 };
 
 class DataProducer {
-
   using ProduceInfo = struct ProduceInfo;
 
-public:
+ public:
   explicit DataProducer(ProduceInfo produce_info);
 
   /**
    * @brief Produce files using info in the struct ProduceInfo
-   *
    * @return true if produce files successfully
    */
   auto Produce() -> bool;
 
   /**
-   * @brief Delete all files in the directory specified in the struct
-   * ProduceInfo
-   *
+   * @brief Delete all files in the directory specified in the struct ProduceInfo
    * @return true if delete successfully
    */
-  [[nodiscard]] auto Clear() const -> bool;
+  auto Clear() const -> bool;
 
-private:
+ private:
   std::default_random_engine generator_;
   ProduceInfo produce_info_;
 };

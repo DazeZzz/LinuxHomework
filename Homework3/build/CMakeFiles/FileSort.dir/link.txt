@@ -1,1 +1,0 @@
-/usr/bin/clang++-14 CMakeFiles/FileSort.dir/test.cpp.o -o FileSort 

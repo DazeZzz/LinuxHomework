@@ -1,5 +1,3 @@
-#include "join_threads.h"
-#include "thread_safe_queue.h"
 #include <atomic>
 #include <functional>
 #include <future>
@@ -7,9 +5,11 @@
 #include <type_traits>
 #include <utility>
 #include <vector>
+#include "join_threads.h"
+#include "thread_safe_queue.h"
 
 class ThreadPool {
-public:
+ public:
   ThreadPool() : done_(false), joiner_(threads_) {
     unsigned const thread_count = std::thread::hardware_concurrency();
     try {
@@ -32,21 +32,21 @@ public:
   template <typename FunctionType>
   std::future<std::result_of_t<FunctionType()>> SubmitTask(FunctionType fun) {
     using result_type = std::result_of_t<FunctionType()>;
-    std::packaged_task<void()> task{std::move(fun)};
+    std::packaged_task<result_type()> task{std::move(fun)};
     std::future<result_type> res{task.get_future()};
     tasks_.Push(std::move(task));
     return res;
   }
 
-private:
+ private:
   std::atomic_bool done_;
-  ThreadSafeQueue<std::packaged_task<void()>> tasks_;
+  ThreadSafeQueue<std::packaged_task<bool()>> tasks_;
   std::vector<std::thread> threads_;
   JoinThreads joiner_;
 
   void WorkerThread() {
     while (!done_) {
-      std::packaged_task<void()> task;
+      std::packaged_task<bool()> task;
       if (tasks_.TryPop(task)) {
         task();
       } else {

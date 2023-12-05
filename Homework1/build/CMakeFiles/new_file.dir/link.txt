@@ -1,2 +1,0 @@
-/usr/bin/ar qc libnew_file.a CMakeFiles/new_file.dir/new_file.cpp.o
-/usr/bin/ranlib libnew_file.a

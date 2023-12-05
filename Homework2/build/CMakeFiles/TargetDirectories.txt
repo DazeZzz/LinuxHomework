@@ -1,3 +1,0 @@
-/root/Homework2/build/CMakeFiles/ls.dir
-/root/Homework2/build/CMakeFiles/edit_cache.dir
-/root/Homework2/build/CMakeFiles/rebuild_cache.dir
